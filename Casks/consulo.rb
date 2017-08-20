@@ -12,7 +12,7 @@ cask 'consulo' do
                 '~/Library/Application Support/Consulo',
                 '~/Library/Caches/Consulo',
                 '~/Library/Logs/Consulo'
-              ],
+      ],
       trash: [
                 '~/Library/Preferences/Consulo'
       ]
