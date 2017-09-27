@@ -7,6 +7,6 @@ cask 'unity-version-selector' do
   homepage 'https://github.com/GeneralD/Unity-Version-Selector'
   depends_on formula: 'coreutils'
   
-  app ['Unity-Version-Selector-master/Unity Version Selector.app',
-       'Unity-Version-Selector-master/Unity Version Selector 2017.app']
+  app 'Unity-Version-Selector-master/Unity Version Selector.app'
+  app 'Unity-Version-Selector-master/Unity Version Selector 2017.app'
 end
