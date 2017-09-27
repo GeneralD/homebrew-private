@@ -6,5 +6,5 @@ cask 'unity-package-unpacker' do
   name 'Unity Package Unpacker'
   homepage 'https://github.com/GeneralD/Unity-Package-Unpacker'
 
-  app 'Unity Package Unpacker.app'
+  app 'Unity-Package-Unpacker-master/Unity Package Unpacker.app'
 end
