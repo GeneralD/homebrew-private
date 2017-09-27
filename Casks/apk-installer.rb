@@ -5,7 +5,7 @@ cask 'apk-installer' do
   url 'https://codeload.github.com/GeneralD/MobileAppInstallers/zip/master'
   name 'APK Installer'
   homepage 'https://github.com/GeneralD/MobileAppInstallers'
-  depends_on fomula: android-sdk
+  depends_on fomula: 'android-sdk'
 
   app 'MobileAppInstallers-master/APK Installer.app'
 end
