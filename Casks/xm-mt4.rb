@@ -6,5 +6,5 @@ cask 'xm-mt4' do
   name 'XM MT4'
   homepage 'https://www.xm.com/metatrader-mac'
 
-  app 'XM MT4.app'
+  app 'XM.app'
 end
