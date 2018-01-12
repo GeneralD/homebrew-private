@@ -4,7 +4,7 @@ cask 'react-studio' do
   version :latest
   sha256 :no_check
 
-  url JSON.parse(`curl -X POST https://reactstudio.com/api/download/reactstudio`)['downloadUrl']
+  url JSON.parse(`curl -sX POST https://reactstudio.com/api/download/reactstudio`)['downloadUrl']
   name 'React Studio'
   homepage 'https://reactstudio.com'
 
