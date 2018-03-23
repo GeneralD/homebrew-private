@@ -7,4 +7,15 @@ cask 'townwifi' do
   homepage 'http://townwifi.jp'
   
   pkg 'TownWifi.pkg'
+
+  uninstall pkgutil: 'jp.townwifi.townwifi'
+
+  zap delete: [
+    '~/Library/Application Support/jp.townwifi.townwifi',
+    '~/Library/Caches/jp.townwifi.townwifi'
+    '~/Library/Preferences/com.company.appname.plist'
+  ],
+  trash: [
+    '~/Library/Preferences/jp.townwifi.townwifi.plist'
+  ]
 end
