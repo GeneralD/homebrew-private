@@ -7,6 +7,4 @@ cask 'townwifi' do
   homepage 'http://townwifi.jp'
   
   pkg 'TownWifi.pkg'
-
-  app 'TownWifi.app'
 end
