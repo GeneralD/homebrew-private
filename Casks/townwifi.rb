@@ -14,9 +14,7 @@ cask 'townwifi' do
     '~/Library/Application Support/jp.townwifi.townwifi',
     '~/Library/Caches/jp.townwifi.townwifi',
     '~/Library/Preferences/com.company.appname.plist'
-  ]
-
-  trash: [
+  ], trash: [
     '~/Library/Preferences/jp.townwifi.townwifi.plist'
   ]
 end
