@@ -6,6 +6,8 @@ cask 'insta360studio' do
   name 'Insta360Studio'
   homepage 'https://www.insta360.com/'
 
+  pkg "Insta360Studio_Mac_#{version}.pkg"
+
   uninstall pkgutil: 'com.arashivision.Insta360Studio'
 
   zap delete: [
