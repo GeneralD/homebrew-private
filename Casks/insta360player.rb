@@ -6,8 +6,6 @@ cask 'insta360player' do
   name 'Insta360Player'
   homepage 'https://www.insta360.com/'
 
-  pkg "Insta360Player_Mac_#{version}.pkg"
-
   uninstall pkgutil: 'com.arashivision.Insta360Player'
 
   zap delete: [
