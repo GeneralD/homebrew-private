@@ -6,5 +6,5 @@ cask 'vroid-studio' do
   name 'VRoid Studio'
   homepage 'https://vroid.pixiv.net/'
 
-  app "VRoidStudio.app"
+  app "VRoidStudio/VRoidStudio.app"
 end
