@@ -6,5 +6,7 @@ cask 'ql-procreate-viewer' do
   name 'ProcreateViewer'
   homepage 'https://jaromvogel.com/ProcreateViewer'
 
+  pkg "ProcreateViewer.pkg"
+
   uninstall pkgutil: 'com.jaromvogel.procreateviewer'
 end
