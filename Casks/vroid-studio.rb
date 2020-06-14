@@ -1,10 +1,10 @@
 cask 'vroid-studio' do
-  version '0.2.0'
+  version '0.9.5'
   sha256 :no_check
 
-  url "https://vroid.pixiv.net/dist/VRoidStudio-v#{version}-mac.zip"
+  url "https://download.vroid.com/dist/VRoidStudio-v#{version}-mac.dmg"
   name 'VRoid Studio'
-  homepage 'https://vroid.pixiv.net/'
+  homepage 'https://vroid.com/studio'
 
-  app "VRoidStudio/VRoidStudio.app"
+  app "VRoidStudio.app"
 end
