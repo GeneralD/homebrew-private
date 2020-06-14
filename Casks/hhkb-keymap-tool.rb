@@ -4,9 +4,9 @@ cask 'hhkb-keymap-tool' do
 
   url "https://origin.pfultd.com/downloads/hhkb/mac/HHKBkeymapTool_#{version}ma.dmg"
   name 'Happy Hacking Keyboard Keymap Tool'
-  homepage 'https://happyhackingkb.com/download' 
+  homepage 'https://happyhackingkb.com/download'
 
-  pkg "HHKBkeymapTool_#{version}ma.pkg"
+#   pkg "HHKBkeymapTool_#{version}ma.pkg"
   app 'Happy Hacking Keyboard Keymap Tool.app'
 
   zap delete: [
