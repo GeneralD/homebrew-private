@@ -6,8 +6,7 @@ cask 'hhkb-keymap-tool' do
   name 'Happy Hacking Keyboard Keymap Tool'
   homepage 'https://happyhackingkb.com/download'
 
-#   pkg "HHKBkeymapTool_#{version}ma.pkg"
-  app 'Happy Hacking Keyboard Keymap Tool.app'
+  pkg "HHKBkeymapTool_#{version}ma.pkg"
 
   zap delete: [
     '~/Library/Application Support/hhkb-keymap-tool'
