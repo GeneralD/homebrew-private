@@ -14,7 +14,10 @@ cask 'hhkb-keymap-tool' do
 
   uninstall quit: 'jp.co.pfu.hhkb-keymap-tool',
             pkgutil: 'jp.co.pfu.hhkb-keymap-tool.pkg.*',
-            delete: '/Applications/hhkb-keymap-tool.app'
+            delete: [
+                '/Applications/hhkb-keymap-tool.app',
+                '/Applications/HHKB',
+            ]
 
   zap delete: [
     '~/Library/Application Support/hhkb-keymap-tool'
