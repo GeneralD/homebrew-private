@@ -1,8 +1,8 @@
 class Magia < Formula
   desc "An ultimate NFT generator for the proffesionals"
   homepage "https://github.com/GeneralD/Magia"
-  url "https://github.com/GeneralD/Magia/archive/refs/tags/1.0.7.tar.gz"
-  sha256 "ac08836048f06651eb240d9c49405651dc8d1a425da7f97a9a8b69f422b1a730"
+  url "https://github.com/GeneralD/Magia/archive/refs/tags/1.0.8.tar.gz"
+  sha256 "d6de3421f5e13a76e0a26ba0ca50a65a501d2f1b6a4dc6caeb75240063026b6e"
 
   option "without-completions", "Disable zsh completions"
 
