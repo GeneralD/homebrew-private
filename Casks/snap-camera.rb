@@ -26,9 +26,9 @@ cask 'snap-camera' do
   zap trash: [
     '~/Library/Application Support/Snap Camera',
     '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.snap.snapcamera.sfl*',
-     '~/Library/Caches/Snap/Snap Camera',
-     '~/Library/Preferences/Snap/Snap Camera',
-     '~/Library/Preferences/com.snap.SnapCamera.plist',
-     '~/Library/Saved Application State/com.snap.SnapCamera.savedState',
-    ]
+    '~/Library/Caches/Snap/Snap Camera',
+    '~/Library/Preferences/Snap/Snap Camera',
+    '~/Library/Preferences/com.snap.SnapCamera.plist',
+    '~/Library/Saved Application State/com.snap.SnapCamera.savedState',
+  ]
 end
