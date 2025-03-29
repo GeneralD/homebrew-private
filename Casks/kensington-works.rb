@@ -8,5 +8,5 @@ cask 'kensington-works' do
 
   pkg "kensingtonworks_#{version}_1733515752.pkg"
 
-  uninstall pkgutil: 'com.kensington.kensingtonworks'
+  uninstall pkgutil: 'com.kensington.trackballworks2.installer'
 end
