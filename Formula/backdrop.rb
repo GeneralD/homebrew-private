@@ -10,7 +10,7 @@ class Backdrop < Formula
     system "make", "install", "PREFIX=#{prefix}"
 
     if build.with? "completions"
-      generate_completions_from_executable(bin/"backdrop", "completion", shell_parameter_format: :none, shells: [:zsh, :bash, :fish])
+      generate_completions_from_executable(bin/"backdrop", "completion", shell_parameter_format: :arg, shells: [:zsh, :bash, :fish])
     end
   end
 
