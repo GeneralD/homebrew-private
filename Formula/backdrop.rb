@@ -1,8 +1,8 @@
 class Backdrop < Formula
   desc "Desktop lyrics overlay and video wallpaper for macOS"
   homepage "https://github.com/GeneralD/backdrop"
-  url "https://github.com/GeneralD/backdrop/archive/refs/tags/v1.1.3.tar.gz"
-  sha256 "312d9594d06ff2fc2519498f1bad76ebd7ab44029bfdeb1cfc74cc0a0d271e55"
+  url "https://github.com/GeneralD/backdrop/archive/refs/tags/v1.1.4.tar.gz"
+  sha256 "5880f0935c83f3b5171bd46f6a0562848a0179e2ba3467f75939098f948f52ec"
 
   def install
     system "make", "install", "PREFIX=#{prefix}"
