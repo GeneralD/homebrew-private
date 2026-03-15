@@ -4,18 +4,17 @@ class Backdrop < Formula
   url "https://github.com/GeneralD/backdrop/archive/refs/tags/v1.1.3.tar.gz"
   sha256 "312d9594d06ff2fc2519498f1bad76ebd7ab44029bfdeb1cfc74cc0a0d271e55"
 
-  option "without-completions", "Disable zsh completions"
-
   def install
     system "make", "install", "PREFIX=#{prefix}"
 
-    if build.with? "completions"
-      generate_completions_from_executable(bin/"backdrop", "completion", shell_parameter_format: :arg, shells: [:zsh, :bash, :fish])
-    end
-  end
+    output = Utils.safe_popen_read(bin/"backdrop", "completion", "zsh")
+    (zsh_completion/"_backdrop").write output
 
-  def uninstall
-    system "make", "uninstall", "PREFIX=#{prefix}"
+    output = Utils.safe_popen_read(bin/"backdrop", "completion", "bash")
+    (bash_completion/"backdrop").write output
+
+    output = Utils.safe_popen_read(bin/"backdrop", "completion", "fish")
+    (fish_completion/"backdrop.fish").write output
   end
 
   test do
