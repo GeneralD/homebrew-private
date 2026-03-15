@@ -1,8 +1,8 @@
 class Backdrop < Formula
   desc "Desktop lyrics overlay and video wallpaper for macOS"
   homepage "https://github.com/GeneralD/backdrop"
-  url "https://github.com/GeneralD/backdrop/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "7aa53e92a0d1bf3303f596fb374a6844c2a853c60b0b70eac3c04c0b2723387c"
+  url "https://github.com/GeneralD/backdrop/archive/refs/tags/v1.1.3.tar.gz"
+  sha256 "312d9594d06ff2fc2519498f1bad76ebd7ab44029bfdeb1cfc74cc0a0d271e55"
 
   option "without-completions", "Disable zsh completions"
 
