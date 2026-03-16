@@ -1,0 +1,30 @@
+class Lyra < Formula
+  desc "Desktop lyrics overlay and video wallpaper for macOS"
+  homepage "https://github.com/GeneralD/lyra"
+  url "https://github.com/GeneralD/lyra/archive/refs/tags/v1.1.4.tar.gz"
+  sha256 "5880f0935c83f3b5171bd46f6a0562848a0179e2ba3467f75939098f948f52ec"
+
+  def install
+    system "swift", "build", "--disable-sandbox", "-c", "release"
+
+    build_dir = Utils.safe_popen_read("swift", "build", "--show-bin-path", "-c", "release").strip
+
+    libexec.install Dir["#{build_dir}/lyra"]
+    libexec.install Dir["#{build_dir}/*.bundle"]
+
+    (bin/"lyra").write_env_script libexec/"lyra", {}
+
+    output = Utils.safe_popen_read(libexec/"lyra", "completion", "zsh")
+    (zsh_completion/"_lyra").write output
+
+    output = Utils.safe_popen_read(libexec/"lyra", "completion", "bash")
+    (bash_completion/"lyra").write output
+
+    output = Utils.safe_popen_read(libexec/"lyra", "completion", "fish")
+    (fish_completion/"lyra.fish").write output
+  end
+
+  test do
+    system libexec/"lyra", "version"
+  end
+end
