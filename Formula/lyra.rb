@@ -7,10 +7,10 @@ class Lyra < Formula
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
 
-    build_dir = Utils.safe_popen_read("swift", "build", "--show-bin-path", "-c", "release").strip
+    build_dir = Utils.safe_popen_read("swift", "build", "--disable-sandbox", "--show-bin-path", "-c", "release").strip
 
-    libexec.install Dir["#{build_dir}/lyra"]
-    libexec.install Dir["#{build_dir}/*.bundle"]
+    libexec.install "#{build_dir}/lyra"
+    Dir["#{build_dir}/*.bundle"].each { |b| libexec.install b }
 
     (bin/"lyra").write_env_script libexec/"lyra", {}
 
