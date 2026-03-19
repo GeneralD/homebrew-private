@@ -1,4 +1,4 @@
-# homebrew-private
+# homebrew-tap
 
 ## What's this?
 A tap of Homebrew.
@@ -9,5 +9,5 @@ This tap includes my favorite apps but not in official taps or not major.
 run command as below
 
 ```
-brew tap generald/private
+brew tap generald/tap
 ```
