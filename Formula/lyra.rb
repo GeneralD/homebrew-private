@@ -24,6 +24,23 @@ class Lyra < Formula
     (fish_completion/"lyra.fish").write output
   end
 
+  service do
+    run [opt_libexec/"lyra", "daemon"]
+    keep_alive true
+    log_path var/"log/lyra.log"
+    error_log_path var/"log/lyra.log"
+  end
+
+  def caveats
+    <<~EOS
+      To start lyra as a background service:
+        brew services start lyra
+
+      Or start manually:
+        lyra start
+    EOS
+  end
+
   test do
     system libexec/"lyra", "version"
   end
