@@ -41,6 +41,14 @@ class Lyra < Formula
     EOS
   end
 
+  def post_uninstall
+    %w[com.generald.lyra homebrew.mxcl.lyra].each do |label|
+      quiet_system "launchctl", "bootout", "gui/#{Process.uid}/#{label}"
+      plist = Pathname.new(Dir.home)/"Library/LaunchAgents/#{label}.plist"
+      plist.delete if plist.exist?
+    end
+  end
+
   test do
     system libexec/"lyra", "version"
   end
