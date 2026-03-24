@@ -1,8 +1,8 @@
 class Lyra < Formula
   desc "Desktop lyrics overlay and video wallpaper for macOS"
   homepage "https://github.com/GeneralD/lyra"
-  url "https://github.com/GeneralD/lyra/archive/refs/tags/v2.2.2.tar.gz"
-  sha256 "9a17a30a422b49dd6ef59ed960953c1f469ba9b84771537c91ed030a9b2c6a8e"
+  url "https://github.com/GeneralD/lyra/archive/refs/tags/v2.2.3.tar.gz"
+  sha256 "7b27d6c336f0425882869ab7588351d019c1f0cd03f27f8dd7fba422dd113a9b"
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release"
