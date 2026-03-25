@@ -4,13 +4,20 @@ class Lyra < Formula
   url "https://github.com/GeneralD/lyra/archive/refs/tags/v2.3.1.tar.gz"
   sha256 "cf4a31444176445e416d7ab133b54f298a1d5fc01a3ab7eaedaba2e7c8216f04"
 
+  depends_on :macos
+
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release"
-
-    build_dir = Utils.safe_popen_read("swift", "build", "--disable-sandbox", "--show-bin-path", "-c", "release").strip
-
-    libexec.install "#{build_dir}/lyra"
-    Dir["#{build_dir}/*.bundle"].each { |b| libexec.install b }
+    # If archive contains pre-built binary (from GitHub Release asset)
+    if File.exist?("lyra")
+      libexec.install "lyra"
+      Dir["*.bundle"].each { |b| libexec.install b }
+    else
+      # Fallback: build from source (source tarball)
+      system "swift", "build", "--disable-sandbox", "-c", "release"
+      build_dir = Utils.safe_popen_read("swift", "build", "--disable-sandbox", "--show-bin-path", "-c", "release").strip
+      libexec.install "#{build_dir}/lyra"
+      Dir["#{build_dir}/*.bundle"].each { |b| libexec.install b }
+    end
 
     (bin/"lyra").write_env_script libexec/"lyra", {}
 
