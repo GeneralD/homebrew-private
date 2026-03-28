@@ -6,6 +6,8 @@ class Lyra < Formula
   sha256 "6ec0fce421da0402cd28c76edcd5e57d78cb68ed20fbe97d6701dcd867cd8c76"
 
   depends_on :macos
+  depends_on "yt-dlp"
+  depends_on "ffmpeg"
 
   def install
     # If archive contains pre-built binary (from GitHub Release asset)
@@ -37,6 +39,7 @@ class Lyra < Formula
     keep_alive true
     log_path var/"log/lyra.log"
     error_log_path var/"log/lyra.log"
+    environment_variables PATH: "#{HOMEBREW_PREFIX}/bin:#{HOMEBREW_PREFIX}/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
   end
 
   def caveats
