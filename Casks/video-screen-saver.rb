@@ -1,6 +1,6 @@
 cask "video-screen-saver" do
   version "1.0.2"
-  sha256 "08c357778464db2f253c8159655645639e9e2d00c44a858969d35616b09636ef"
+  sha256 "70645864b3f4207a71d963d34b7b70ff3946855136834793c018a4e2c8d80ed8"
 
   url "https://github.com/GeneralD/VideoScreenSaver/releases/download/v1.0.2/VideoScreenSaver-1.0.2.zip"
   name "VideoScreenSaver"
